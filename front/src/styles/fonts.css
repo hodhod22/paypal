@@ -1,0 +1,76 @@
+/* Font definitions for multi-language support */
+
+/* Arabic font */
+@font-face {
+  font-family: 'DroidArabicKufi';
+  src: local('Droid Arabic Kufi'), local('DroidArabicKufi');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Persian font */
+@font-face {
+  font-family: 'Vazir';
+  src: local('Vazir'), local('Vazir-Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font classes for different languages */
+.font-en {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-sv {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-ar {
+  font-family: 'DroidArabicKufi', 'Tahoma', 'Arial', sans-serif;
+}
+
+.font-fa {
+  font-family: 'Vazir', 'Tahoma', 'Arial', sans-serif;
+}
+
+.font-tr {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Apply fonts based on language attribute */
+html[lang="en"] body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html[lang="sv"] body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html[lang="ar"] body {
+  font-family: 'DroidArabicKufi', 'Tahoma', 'Arial', sans-serif;
+}
+
+html[lang="fa"] body {
+  font-family: 'Vazir', 'Tahoma', 'Arial', sans-serif;
+}
+
+html[lang="tr"] body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* RTL specific font adjustments */
+html[dir="rtl"] {
+  font-size: 105%; /* Slightly larger font size for RTL languages */
+  line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* Font size adjustments for different languages */
+html[lang="ar"] {
+  font-size: 105%;
+}
+
+html[lang="fa"] {
+  font-size: 105%;
+} 

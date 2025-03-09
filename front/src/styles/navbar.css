@@ -1,0 +1,103 @@
+/* Navbar RTL Styles */
+.rtl .navbar-container {
+  direction: rtl;
+}
+
+/* Fix spacing in RTL mode */
+.rtl .space-x-1 > * + * {
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+
+.rtl .space-x-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+/* Fix dropdown positioning in RTL mode */
+.rtl .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* Fix mobile menu in RTL mode */
+.rtl .mobile-menu {
+  text-align: right;
+}
+
+.rtl .mobile-menu-item {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* Fix icon positioning in RTL mode */
+.rtl .icon-left {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.rtl .icon-right {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* Fix language switcher in RTL mode */
+.rtl .language-switcher {
+  right: 0;
+  left: auto;
+}
+
+/* Fix settings menu in RTL mode */
+.rtl .settings-menu {
+  right: 0;
+  left: auto;
+}
+
+/* Fix mobile menu nested items in RTL mode */
+.rtl .nested-menu {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+/* Fix mobile menu icon spacing in RTL mode */
+.rtl .mobile-menu-icon {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+/* Fix container padding in RTL mode */
+.rtl .container-padding {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .rtl .container-padding {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/* Fix hover effects in RTL mode */
+.rtl .hover-effect:hover {
+  transform: translateX(-3px);
+}
+
+/* Fix transition effects in RTL mode */
+.rtl .transition-effect {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Fix shadow effects in RTL mode */
+.rtl .shadow-effect {
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix border effects in RTL mode */
+.rtl .border-effect {
+  border-right: 3px solid transparent;
+}
+
+.rtl .border-effect:hover {
+  border-right-color: #ffffff;
+} 

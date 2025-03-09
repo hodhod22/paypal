@@ -1,0 +1,413 @@
+/* RTL Support */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .ml-1, 
+html[dir="rtl"] .ml-2, 
+html[dir="rtl"] .ml-3, 
+html[dir="rtl"] .ml-4 {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .mr-1, 
+html[dir="rtl"] .mr-2, 
+html[dir="rtl"] .mr-3, 
+html[dir="rtl"] .mr-4 {
+  margin-right: 0;
+}
+
+html[dir="rtl"] .ml-1 { margin-right: 0.25rem; }
+html[dir="rtl"] .ml-2 { margin-right: 0.5rem; }
+html[dir="rtl"] .ml-3 { margin-right: 0.75rem; }
+html[dir="rtl"] .ml-4 { margin-right: 1rem; }
+
+html[dir="rtl"] .mr-1 { margin-left: 0.25rem; }
+html[dir="rtl"] .mr-2 { margin-left: 0.5rem; }
+html[dir="rtl"] .mr-3 { margin-left: 0.75rem; }
+html[dir="rtl"] .mr-4 { margin-left: 1rem; }
+
+/* RTL for flexbox */
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .justify-start {
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .justify-end {
+  justify-content: flex-start;
+}
+
+/* RTL for text alignment */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* RTL for icons and elements that should be flipped */
+html[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+/* RTL for input groups */
+html[dir="rtl"] .input-group > *:first-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+html[dir="rtl"] .input-group > *:last-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* RTL for Arabic and Persian fonts */
+html[lang="ar"],
+html[lang="fa"] {
+  font-family: 'Tahoma', 'Arial', sans-serif;
+}
+
+/* Add custom font for Arabic */
+@font-face {
+  font-family: 'DroidArabicKufi';
+  src: url('/fonts/DroidKufi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html[lang="ar"] {
+  font-family: 'DroidArabicKufi', 'Tahoma', sans-serif;
+}
+
+/* Add custom font for Persian */
+@font-face {
+  font-family: 'Vazir';
+  src: url('/fonts/Vazir-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html[lang="fa"] {
+  font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* RTL Styles */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Fix Tailwind's space utilities in RTL mode */
+.rtl .space-x-1 > * + *,
+.rtl .space-x-2 > * + *,
+.rtl .space-x-3 > * + *,
+.rtl .space-x-4 > * + *,
+.rtl .space-x-6 > * + *,
+.rtl .space-x-8 > * + * {
+  margin-right: var(--tw-space-x-reverse);
+  margin-left: 0;
+}
+
+.rtl .space-x-reverse > * + * {
+  margin-right: 0;
+  margin-left: var(--tw-space-x-reverse);
+}
+
+/* Fix dropdown positioning in RTL mode */
+.rtl .dropdown-right {
+  right: auto;
+  left: 0;
+}
+
+.rtl .dropdown-left {
+  left: auto;
+  right: 0;
+}
+
+/* Fix icon positioning in RTL mode */
+.rtl .icon-right {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .icon-left {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Fix navbar in RTL mode */
+.rtl .navbar-icon {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Fix mobile menu in RTL mode */
+.rtl .mobile-menu {
+  text-align: right;
+}
+
+.rtl .mobile-menu-item {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* Fix language switcher in RTL mode */
+.rtl .language-switcher .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* Fix settings menu in RTL mode */
+.rtl .settings-menu .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* Fix flex direction in RTL mode */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.rtl .flex-row-reverse {
+  flex-direction: row;
+}
+
+/* Fix text alignment in RTL mode */
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}
+
+/* Fix padding and margin in RTL mode */
+.rtl .pl-2, .rtl .px-2, .rtl .p-2 {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+.rtl .pr-2, .rtl .px-2, .rtl .p-2 {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+.rtl .ml-2, .rtl .mx-2, .rtl .m-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .mr-2, .rtl .mx-2, .rtl .m-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .pl-4, .rtl .px-4, .rtl .p-4 {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.rtl .pr-4, .rtl .px-4, .rtl .p-4 {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+.rtl .ml-4, .rtl .mx-4, .rtl .m-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.rtl .mr-4, .rtl .mx-4, .rtl .m-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* Fix border radius in RTL mode */
+.rtl .rounded-l {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rtl .rounded-r {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Fix transform in RTL mode */
+.rtl .translate-x-1 {
+  --tw-translate-x: -0.25rem;
+}
+
+.rtl .translate-x-2 {
+  --tw-translate-x: -0.5rem;
+}
+
+.rtl .translate-x-4 {
+  --tw-translate-x: -1rem;
+}
+
+.rtl .-translate-x-1 {
+  --tw-translate-x: 0.25rem;
+}
+
+.rtl .-translate-x-2 {
+  --tw-translate-x: 0.5rem;
+}
+
+.rtl .-translate-x-4 {
+  --tw-translate-x: 1rem;
+}
+
+/* Fix grid in RTL mode */
+.rtl .grid {
+  direction: rtl;
+}
+
+/* Fix scrollbar in RTL mode */
+.rtl ::-webkit-scrollbar {
+  direction: ltr;
+}
+
+/* Fix navbar container in RTL mode */
+.rtl .container {
+  direction: rtl;
+}
+
+/* Fix language dropdown positioning in RTL mode */
+.rtl .language-dropdown-container {
+  left: 0;
+  right: auto;
+}
+
+/* Fix language dropdown in RTL mode */
+.rtl .language-dropdown {
+  left: 0;
+  right: auto;
+  transform: none !important;
+}
+
+/* Fix language buttons in RTL mode */
+.rtl .language-button {
+  flex-direction: row-reverse;
+}
+
+/* Fix language button icons in RTL mode */
+.rtl .language-button span:first-child {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Fix navbar positioning in RTL mode */
+.rtl .navbar {
+  direction: rtl;
+}
+
+/* Fix navbar items in RTL mode */
+.rtl .navbar-item {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* Fix navbar container in RTL mode */
+.rtl .navbar-container {
+  transform: none !important;
+}
+
+/* Fix navbar positioning in RTL mode */
+html[dir="rtl"] body {
+  transform: none !important;
+}
+
+/* Fix container positioning in RTL mode */
+html[dir="rtl"] .container {
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fix body positioning in RTL mode */
+html[dir="rtl"] {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fix body positioning in RTL mode */
+.rtl {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* RTL specific styles for PayoutForm */
+.rtl-form input,
+.rtl-form textarea,
+.rtl-form select {
+  text-align: right;
+}
+
+.rtl-form label {
+  text-align: right;
+  display: block;
+}
+
+.rtl-form .flex {
+  flex-direction: row-reverse;
+}
+
+.rtl-form button {
+  direction: rtl;
+}
+
+.rtl-form .error-message {
+  text-align: right;
+}
+
+/* Currency display in RTL mode */
+.rtl-form .currency-display {
+  flex-direction: row-reverse;
+}
+
+/* Status display in RTL mode */
+.rtl-form .status-display {
+  text-align: right;
+}
+
+/* Specific language font adjustments */
+.font-fa {
+  font-family: 'Vazir', 'Tahoma', 'Arial', sans-serif;
+}
+
+.font-ar {
+  font-family: 'DroidArabicKufi', 'Tahoma', 'Arial', sans-serif;
+}
+
+.font-tr {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-sv {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 

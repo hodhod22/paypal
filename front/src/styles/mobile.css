@@ -1,0 +1,353 @@
+/* Mobile-specific styles */
+
+/* Mobile menu animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRTL {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  animation: slideIn 0.3s ease-out;
+}
+
+.rtl .mobile-menu {
+  animation: slideInRTL 0.3s ease-out;
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile menu item hover effect */
+.mobile-menu-item {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.mobile-menu-item:active {
+  transform: scale(0.98);
+}
+
+/* Mobile-specific typography */
+@media (max-width: 767px) {
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+}
+
+/* Mobile-specific spacing */
+@media (max-width: 767px) {
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile-py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .mobile-px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-m-2 {
+    margin: 0.5rem;
+  }
+  
+  .mobile-my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mobile-mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Mobile-specific layout */
+@media (max-width: 767px) {
+  .mobile-full-width {
+    width: 100%;
+  }
+  
+  .mobile-flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-items-center {
+    align-items: center;
+  }
+  
+  .mobile-justify-center {
+    justify-content: center;
+  }
+}
+
+/* Mobile navbar specific styles */
+@media (max-width: 767px) {
+  .navbar-mobile {
+    padding: 0.75rem 1rem;
+  }
+  
+  .navbar-logo-mobile {
+    font-size: 1.25rem;
+  }
+}
+
+/* RTL mobile specific adjustments */
+.rtl .mobile-menu-item {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+.rtl .mobile-icon-right {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.rtl .mobile-icon-left {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* Mobile touch targets */
+@media (max-width: 767px) {
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile menu dividers */
+.mobile-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0.5rem 0;
+}
+
+/* Mobile menu section headers */
+.mobile-section-header {
+  font-weight: 600;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+}
+
+/* Mobile language switcher */
+.mobile-language-switcher {
+  position: relative;
+  z-index: 30;
+}
+
+.mobile-language-switcher button {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.mobile-language-switcher button:hover,
+.mobile-language-switcher button:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-language-switcher .dropdown-menu {
+  min-width: 120px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Language switcher styles for all screen sizes */
+.language-button {
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.language-button.active,
+.language-button[aria-selected="true"] {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #3d8b40;
+}
+
+.language-button:hover {
+  background-color: #e0e0e0;
+}
+
+.language-button:active {
+  transform: translateY(1px);
+}
+
+/* Language dropdown container */
+.language-dropdown-container {
+  z-index: 1000;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 150px;
+}
+
+/* Ensure language switcher is visible on all backgrounds */
+.mobile-language-icon {
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Language buttons container */
+.language-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px;
+}
+
+/* Desktop language switcher */
+@media (min-width: 768px) {
+  .desktop-language-switcher button {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .language-button {
+    min-width: 120px;
+  }
+}
+
+/* Add a subtle indicator for the current language */
+.current-language-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.rtl .current-language-indicator {
+  right: 50%;
+  left: auto;
+  transform: translateX(50%);
+}
+
+/* Global scrolling fixes */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Fix for mobile viewport height issues */
+.min-h-screen {
+  min-height: 100vh;
+  /* Use the fill-available value for browsers that support it */
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: stretch;
+}
+
+/* Fix for mobile content overflow */
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Ensure content is always scrollable on small screens */
+@media (max-width: 767px) {
+  .mobile-scrollable {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh;
+    max-height: -webkit-fill-available;
+  }
+}
+
+/* Fix for save button on small screens */
+@media (max-width: 767px) {
+  .profile-save-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rtl .profile-save-button {
+    right: auto;
+    left: 20px;
+  }
+  
+  /* Add extra padding at the bottom of forms on mobile */
+  .mobile-form-padding {
+    padding-bottom: 80px;
+  }
+} 
